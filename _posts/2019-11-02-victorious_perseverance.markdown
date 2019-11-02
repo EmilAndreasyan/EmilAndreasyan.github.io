@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Victorious perseverance"
-date:       2019-11-02 04:15:03 +0000
+date:       2019-11-02 00:15:04 -0400
 permalink:  victorious_perseverance
 ---
 
@@ -35,7 +35,7 @@ end
 ```
 
 It would iterate over the data, and save its parts in different variables, so I could initialize an instance of `TubiTv::Movie` class. As a convenience, I stored that data in a hash so it’s more easily implemented in `Movie` class.
-In the above-mentioned class, not only the `movie_hash` is to be put in place of the argument so the overall class could be more abstract, but also ‘each’ and ‘send’ methods are used, so less could be written and more could be done, if I ever want to get back to the code and add some other data variable (all I have to do here is to adjust `attr_accessor`, by adding or deleting one of its values, without changing anything in `initialize` method).
+In the above-mentioned class, not only the `movie_hash` is to be put in place of the argument so the overall class could be more abstract, but also `each` and `send` methods are used, so less could be written and more could be done, if I ever want to get back to the code and add some other data variable, all I have to do here is to adjust `attr_accessor`, by adding or deleting one of its values, without changing anything in `initialize` method.
 
 ```
 class TubiTv::Movies
