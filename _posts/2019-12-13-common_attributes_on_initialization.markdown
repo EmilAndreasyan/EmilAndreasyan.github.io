@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Common attributes on initialization"
-date:       2019-12-13 21:15:47 +0000
+title:      "Common attributes of initialization"
+date:       2019-12-13 16:15:48 -0500
 permalink:  common_attributes_on_initialization
 ---
 
