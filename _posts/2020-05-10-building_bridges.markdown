@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Building bridges"
-date:       2020-05-10 04:10:52 +0000
+date:       2020-05-10 00:10:53 -0400
 permalink:  building_bridges
 ---
 
