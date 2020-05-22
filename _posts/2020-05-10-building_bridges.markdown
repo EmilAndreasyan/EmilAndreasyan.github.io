@@ -70,7 +70,25 @@ class AppAdapter {
 	}
 ```
 
-Fetch method sends GET request (unless indicated otherwise) to the domain address, where json data exists (for instance, ‘http://localhost:3000/books’), it returns Promise (.then(response => response.json())), then data. If we put a debugger here, we can notice, that data (or any other conventional name) represents a giant object with “stringified” key: value pairs. You can guess right away (or simply check), that this data has all the parameters you have written in back-end Books table, like ‘id’, ‘title’, ‘rating’, etc, which is quite helpful when creating a new instance of Books class. You console logging errors (if any) and both create and get instances of books table. Creating a new instance takes  to a new js file page (book.js) where every time, when a new instance is created, it is stored in AppContainer.books array (another AppContainer.js file!)
+The best representation of AJAX (asynchronous JavaScript and XML) is fetch() request, which renders data from the server asynchronously (**not** waiting one response to be completed to trigger the other one) and **without** necessity of reloading the page. As users don't like to wait for one page to answer more than several seconds, we provide them with HTML and CSS before loading JS so that they don't surf further because of their impatience. 
+Fetch method:
+1.sends GET request (unless indicated otherwise) to the domain address, where data exists (for instance, ‘http://localhost:3000/books’). If we want to send other types of requests, such as POST, PUT, PATCH or DELETE, we should specify right after page address, like so:
+```
+fetch(`${this.url }/books`, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json'
+			},
+			body: JSON.stringify({
+				title: event.target.title.value,
+				publisher: event.target.publisher.value,
+				rating: event.target.rating.value
+			})
+		})
+```
+2. Then server returns Promise, which represents an object with the data source, which can show whether our asynchronous request was successful or with failure (answering with 3 states: *pending, fulfilled, rejected*). It is like a placeholder before our actual data arrives (we should remember, that Promise is not the actual content we are requesting itself!). We chain this Promise in `.then(response => response.json())` method, which takes this response object and converts it to json (JavaScript object notation), or stringifies it (remember that objects key/value pairs are actually strings), so that it is 'readable' for the browser.
+3. Then data returns as an actual object due to chaining furher in `.then(data => console.log(data))` method (or any other conventional name for "data"), which represents a giant object with “stringified” key: value pairs. You can guess right away (or simply check), that this data has all the parameters you have written in back-end Books table, like ‘id’, ‘title’, ‘rating’, etc, and thus we can finally work with the returned data and, for example, create a new instance of Books class or show them in the browser. You console logging errors (if any) and both create and get instances of books table. Creating a new instance takes  to a new js file page (book.js) where every time, when a new instance is created, it is stored in AppContainer.books array (another AppContainer.js file!)
 
 ```
 class Books {
