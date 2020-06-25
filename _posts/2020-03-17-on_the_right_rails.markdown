@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "On the right Rails"
-date:       2020-03-17 04:55:20 +0000
+date:       2020-03-17 00:55:21 -0400
 permalink:  on_the_right_rails
 ---
 
@@ -58,4 +58,6 @@ Before the closing tag, we have declared `helper_method`, so that we can have ac
 However, if you write your helper method as modules in helper folder, views with the same name already know about this method and you can always inject them in without the necessity of declaring them as helper methods (when generating in console a controller, it creates controllers, routes, views and helpers, which are associated with one another).
 8. As another important part of the authorization comes OmniAuth, which ensures users registarion or logging in with the ability to do so via different third party sites  (strategies), as name suggests (Omni Authorization), such as Facebook, Twitter, GitHub, etc. In this case, our application sends the users to the mentioned sites, where they log in and are redirected back to our site, thus establishing connection (and trust) between user's data in third party sited and our application.
 Building application with Rails might seem easy, but it appears to be challenging once you start working. But later, when you start grasp the concept and workflow, it rewards you greatly by making life easier, eliminating unnecessary code and landing state-of-the-art applications.
+
+GitHub: https://github.com/EmilAndreasyan/Cinemania
 
