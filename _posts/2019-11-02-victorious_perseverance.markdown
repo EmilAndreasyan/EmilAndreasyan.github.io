@@ -89,3 +89,5 @@ After typing both year and genre, it starts iterating over all the data stored i
 This very first project taught me many things, from setting the environment up till writing and running sophisticated methods, but in order to outline only one concept having the highest importance, I would say: never give up, while it’s definitely worth it, or, in other words, “perseverance till the ultimate victory is achieved”!
 So, when can I start my next project?
 
+GitHub: https://github.com/EmilAndreasyan/tubi_tv
+
